@@ -1,0 +1,158 @@
+.content {
+    margin-top: 1em;
+    margin-bottom: 1em;
+    width: 50em;
+    &>i{
+        display: table;
+        color: #484848;
+        font-size: 3em;
+        margin: auto;
+        padding: auto;
+    }
+    .post{
+        box-shadow: 0 0 2px rgba(16, 16, 16, 0.3);
+        margin: 5.5em 0;
+        .post-header{
+            background-color: #1abc9c;
+            color: white;
+            padding: 1.5em;
+            font-weight: bold;
+            font-size: 1.125em; 
+            .report{
+                background-color: #bc7e52;
+            }
+        }
+        .post-content{
+            background-color: #ffffff;
+            color: black;
+            padding: 1.5em;
+            textarea{
+                width: 45em;
+                padding: 1.5em;
+                resize: none;
+                outline: none;
+                height: 30em;
+            }
+        }
+        .post-footer{
+            background-color: #ffffff;
+            border-top: 1px solid #e0e0e0;
+            color: #888888;
+            padding: 1.5em;
+            text-align: right;
+            font-size: 0.5em;
+            line-height: 1.6;
+            .button-post{
+                background-color: #3a6fdb;
+                color: white;
+                font-size: 1rem;
+                padding: 0.75em;
+                width: 240px;
+                text-align: center;
+                display: table;
+                margin: auto;
+                &:hover{
+                    cursor: pointer;
+                    background-color: #2b59cf;
+                }
+            }
+        }
+    }
+}
+.main{
+    margin-left: 240px;
+}
+.more{
+    background-color: #1abc9c;
+    color: white;
+    font-size: 1rem;
+    padding: 0.75em;
+    width: 140px;
+    text-align: center;
+    display: table;
+    margin-top: 1em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom:1em; 
+    &:hover{
+        cursor: pointer;
+        background-color: #1abc99;
+    }
+}
+
+@keyframes logo {
+    0% {
+        transform: translateX(0px);
+    }
+    25% {
+        transform: translateX(-4px);
+    }
+    75% {
+        transform: translateX(4px);
+    }
+    100% {
+        transform: translateX(0px);
+    }
+}
+
+@media screen and (max-width: 1080px) {
+    * {
+        font-size: 14px;
+    }
+    .main {
+        margin-left: 200px;
+        .more{
+            margin-top:32px;
+        }
+    }
+    .content {
+        margin: 64px;
+        .post{
+            width: 30em;
+            .post-footer{
+                .button-post{
+                    width: 140px;
+                }
+                .wrapper{
+                    opacity: 0; letter-spacing: -60px;
+                }
+            }
+            .post-content{
+                textarea{
+                    width: 25em;
+                }
+            }
+        }
+    }
+    .more{
+        margin-top:16px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    * {
+        font-size: 14px;
+    }
+    .main {
+        margin-left: 0;
+        .more{
+            margin-top:16px;
+        }
+    }
+    .content {
+        margin: 32px;
+        width: 15em;
+        .post{
+            width: 24em;
+            .post-footer{
+                font-size: 1em;
+            }
+            .post-content{
+                textarea{
+                    width: 21em;
+                }
+            }
+        }
+    }
+    
+}

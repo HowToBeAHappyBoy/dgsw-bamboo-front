@@ -40,6 +40,11 @@ body, html {
         font-size: 1.375em;
         line-height: 150%;
     }
+    a{ 
+        margin: 0;
+        text-decoration: none;
+        color: #f2f2f2;
+      }
     p{
         &:hover{
             animation: logo 0.8s infinite 0s linear;
@@ -49,7 +54,6 @@ body, html {
     li{
         list-style-type: none;
         padding: 0.75em 1.25em;
-        
         &:first-child{
             margin: 1.33em 0 0 0;
         }
