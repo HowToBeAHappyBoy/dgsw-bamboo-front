@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../Assets/Side.scss';
 
+
 class Side extends Component {
   render() {
     return (
