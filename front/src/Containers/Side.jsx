@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import '../Assets/Side.scss';
+import {Link} from 'react-router-dom'
 
 
 class Side extends Component {
@@ -7,13 +8,16 @@ class Side extends Component {
     return (
     <div>
       <div className="sidebar">
-          <div className="logo">
-              <p>대소고<br/>대나무숲</p>
-          </div>
+        <Link to="/">
+            <div className="logo">
+                <p>대소고<br/>대나무숲</p>
+            </div>
+          </Link>
 
           <ul>
-              <li><i className="fas fa-comment"></i>&nbsp;&nbsp;제보하기</li>
-              <li><i className="fas fa-cog"></i>&nbsp;&nbsp;관리자</li>
+              <Link to="/post"><a><li><i class="fas fa-heart"></i>&nbsp;&nbsp;감나무 숲</li></a></Link>
+              <Link to="/post"><a><li><i className="fas fa-comment"></i>&nbsp;&nbsp;제보하기</li></a></Link>
+              <Link to="post"><a><li><i className="fas fa-cog"></i>&nbsp;&nbsp;관리자</li></a></Link>
           </ul>
       </div>
       <div className="topbar">
