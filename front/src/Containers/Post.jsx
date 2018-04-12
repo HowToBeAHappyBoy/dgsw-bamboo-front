@@ -35,8 +35,8 @@ class Post extends Component{
     }
     render(){
         return(
-            <div className="main">
-                <div className="content">
+            <div className="mainpost">
+                <div className="contents">
                     <div className="post">
                         <div className="post-header">
                             제보하기

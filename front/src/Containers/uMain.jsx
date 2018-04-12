@@ -3,7 +3,7 @@ import '../Assets/User.scss';
 import User from './User';
 import axios from 'axios';
 
-class Main extends Component{
+class uMain extends Component{
     constructor(){
         super();
         this._getCount();
@@ -70,7 +70,7 @@ class Main extends Component{
             <div className="main">
                 {docs?this._renderDocs():<i className="fas fa-circle-notch fa-spin"></i>}
                 {
-                    this.state.count<=this.state.id?
+                    this.state.count<=this.state.id ?
                     "":<div className="more" onClick={this._getDocs}>
                             <i class="fas fa-plus"></i>&nbsp;&nbsp;더보기
                        </div>
@@ -79,4 +79,4 @@ class Main extends Component{
         )
     }
 }
-export default Main
+export default uMain

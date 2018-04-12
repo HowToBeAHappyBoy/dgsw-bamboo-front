@@ -1,5 +1,4 @@
-.content {
-    margin-top: 1em;
+.contents {
     margin-bottom: 1em;
     width: 50em;
     &>i{
@@ -10,6 +9,7 @@
         padding: auto;
     }
     .post{
+        margin-top:1em;
         box-shadow: 0 0 2px rgba(16, 16, 16, 0.3);
         margin: 5.5em 0;
         .post-header{
@@ -59,8 +59,8 @@
         }
     }
 }
-.main{
-    margin-left: 240px;
+.mainpost{
+    margin-left: 320px;
 }
 .more{
     background-color: #1abc9c;
@@ -99,13 +99,13 @@
     * {
         font-size: 14px;
     }
-    .main {
+    .mainpost {
         margin-left: 200px;
         .more{
             margin-top:32px;
         }
     }
-    .content {
+    .contents {
         margin: 64px;
         .post{
             width: 30em;
@@ -133,23 +133,104 @@
     * {
         font-size: 14px;
     }
-    .main {
+    .mainpost {
         margin-left: 0;
         .more{
             margin-top:16px;
         }
     }
-    .content {
+    .contents {
         margin: 32px;
-        width: 15em;
+        width: 40em;
         .post{
-            width: 24em;
+            width: 41em;
             .post-footer{
                 font-size: 1em;
             }
             .post-content{
                 textarea{
-                    width: 21em;
+                    width: 37em;
+                }
+            }
+        }
+    }
+    
+}
+@media screen and (max-width: 420px) {
+    * {
+        font-size: 14px;
+    }
+    .mainpost {
+        margin-left: 0;
+        .more{
+            margin-top:16px;
+        }
+    }
+    .contents {
+        margin: 32px;
+        width: 25em;
+        .post{
+            width: 25em;
+            .post-footer{
+                font-size: 1em;
+            }
+            .post-content{
+                textarea{
+                    width: 20em;
+                }
+            }
+        }
+    }
+    
+}
+@media screen and (max-width: 380px) {
+    * {
+        font-size: 14px;
+    }
+    .mainpost {
+        margin-left: 0;
+        .more{
+            margin-top:16px;
+        }
+    }
+    .contents {
+        margin: 32px;
+        width: 22em;
+        .post{
+            width: 22em;
+            .post-footer{
+                font-size: 1em;
+            }
+            .post-content{
+                textarea{
+                    width: 17em;
+                }
+            }
+        }
+    }
+    
+}
+@media screen and (max-width: 360px) {
+    * {
+        font-size: 14px;
+    }
+    .mainpost {
+        margin-left: 0;
+        .more{
+            margin-top:16px;
+        }
+    }
+    .contents {
+        margin: 32px;
+        width: 19em;
+        .post{
+            width: 19em;
+            .post-footer{
+                font-size: 1em;
+            }
+            .post-content{
+                textarea{
+                    width: 14em;
                 }
             }
         }
