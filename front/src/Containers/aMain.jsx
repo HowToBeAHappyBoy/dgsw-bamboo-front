@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import '../Assets/User.scss';
 import Admin from './Admin';
-import User from './User';
 import axios from 'axios';
-import {Redirect} from 'react-router-dom';
 
 class aMain extends Component{
-    constructor(){
-        super();
+    constructor(props){
+        super(props);
         this.state={
           id:0,
           docs:null
@@ -15,15 +13,27 @@ class aMain extends Component{
         this._getCount();
         this._getDocs();
       }
+      _logout=()=>{
+        localStorage.clear();
+        this.props.history.push("/");
+      }
       _getCount=async ()=>{
         const url="http://ec2-13-125-167-78.ap-northeast-2.compute.amazonaws.com/api/admin/count";
         return axios.get(url,{
           headers:{
             Authorization:localStorage.getItem('@#!!@!@##!@!@!#!@!')
           }})
-        .then(res=>this.setState({
-          count:res.data.count
-        }))
+        .then(res=>{
+            if(res.status!==204){
+              this.setState({
+              count:res.data.count
+            })
+          }else{
+            this.setState({
+              count:0
+            });
+          }
+        })
         .catch(err=>err);
       }
     
@@ -67,7 +77,6 @@ class aMain extends Component{
           return(
             <Admin num={doc.idx} docs={doc.desc} date={doc.writeDate} key={doc.id}/>
             )
-            return docs.reverse();
         });
         return docs;
       }
@@ -76,13 +85,16 @@ class aMain extends Component{
         const {docs}=this.state;
         return(
             <div className="main">
-                {docs?this._renderDocs():<i className="fas fa-circle-notch fa-spin"></i>}
-                {
-                    this.state.count<=this.state.id ?
-                    "":<div className="more" onClick={this._getDocs}>
-                            <i class="fas fa-plus"></i>&nbsp;&nbsp;더보기
-                       </div>
-                }
+                <div className="button-logout" onClick={this._logout}>
+                  <i class="fas fa-sign-out-alt"></i>&nbsp;&nbsp;로그아웃
+                </div>
+                {docs?this._renderDocs():<i className="fas fa-circle-notch fa-spin"></i>}     
+                  {
+                      this.state.count<=this.state.id?
+                      "":<div className="more" onClick={this._getDocs}>
+                              <i class="fas fa-plus"></i>&nbsp;&nbsp;더보기
+                        </div>
+                  }
             </div>
         )
     }

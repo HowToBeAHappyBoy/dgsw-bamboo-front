@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.scss';
 import Side from './Containers/Side';
-import Main from './Containers/Main';
+import uMain from './Containers/uMain';
 import Post from './Containers/Post';
+import Login from './Containers/Login';
+import aMain from './Containers/aMain';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 class App extends Component {
@@ -12,8 +13,10 @@ class App extends Component {
       <Router>
       <div>
         <Side/>
-        <Route exact path="/" component={Main}/>
+        <Route exact path="/" component={uMain}/>
         <Route path="/post" component={Post}/>
+        <Route path="/admin" component={aMain}/>
+        <Route path="/login" component={Login}/>
       </div>
       </Router>
     );

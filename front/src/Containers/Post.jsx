@@ -16,7 +16,7 @@ class Post extends Component{
         }else{
         axios.post('http://ec2-13-125-167-78.ap-northeast-2.compute.amazonaws.com/api/user/post',{desc:this.state.value})
         .then(response=>{
-          if(response.status==201){
+          if(response.status===201){
             alert('제보 성공\n제보된 글은 관리자의 승인 후 게시됩니다');
             this.props.history.push("/");
             e.preventDefault();
@@ -46,7 +46,7 @@ class Post extends Component{
                         </div>
                         <div className="post-footer">
                             <div className="button-post" onClick={this.handleSubmit}>
-                            <i class="fas fa-edit"></i>&nbsp;&nbsp;제보하기
+                                <i class="fas fa-edit"></i>&nbsp;&nbsp;제보하기
                             </div>
                         </div>
                     </div>

@@ -32,7 +32,7 @@ class Login extends Component{
         .catch(err=>alert('관리자 하고 싶어요?'));
     }
     enterkey=(event)=>{
-        let charCode = (typeof event.which == "undefined") ? event.keyCode : event.which;
+        let charCode = (typeof event.which === undefined) ? event.keyCode : event.which;
         if(charCode===13){
             this.onSubmit();
         }

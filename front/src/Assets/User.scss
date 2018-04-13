@@ -72,6 +72,32 @@
                     background-color: #2b59cf;
                 }
             }
+            .button-allow{
+                background-color: #3a6fdb;
+                color: white;
+                font-size: 1rem;
+                padding: 0.75em;
+                float: left;
+                width: 200px;
+                text-align: center;
+                &:hover{
+                    cursor: pointer;
+                    background-color: #2b59cf;
+                }
+            }
+            .button-reject{
+                background-color: #E60A2F;
+                color: white;
+                font-size: 1rem;
+                padding: 0.75em;
+                float: left;
+                width: 200px;
+                text-align: center;
+                &:hover{
+                    cursor: pointer;
+                    background-color: #D0092C;
+                }
+            }
             .button-login{
                 background-color: #3a6fdb;
                 color: white;
@@ -105,6 +131,21 @@
             background-color: #1abc99;
         }
     }
+    .button-logout{
+        background-color: #3a6fdb;
+        color: white;
+        font-size: 1rem;
+        padding: 0.75em;
+        display: table;
+        margin-left: auto;
+        margin-right: auto;
+        width: 240px;
+        text-align: center;
+        &:hover{
+            cursor: pointer;
+            background-color: #2b59cf;
+        }
+    }
 }
 
 @keyframes logo {
@@ -136,7 +177,7 @@
         margin: 64px;
         .card{
             .card-footer{
-                .button-fb{
+                .button-fb,.button-allow,.button-reject,.button-logout{
                     width: 140px;
                 }
                 .wrapper{
@@ -162,7 +203,11 @@
         .card{
             .card-footer{
                 font-size: 1em;
+                .button-allow,.button-reject,.button-logout{
+                    width: 125px;
+                }
             }
+            
         }
     }
     
