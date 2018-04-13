@@ -2,6 +2,14 @@ import React, { Component } from 'react';
 import '../Assets/User.scss';
 
 class User extends Component{
+    constructor(props){
+        super(props);
+        console.log(this.props);
+    }
+    _goFb=()=>{
+        const url="https://www.facebook.com/hashtag/"+"대소고_"+this.props.num+"번째_이야기";
+        window.open(url,"_blank");
+    }
     render(){
         return(
             <div className="content">
@@ -15,7 +23,7 @@ class User extends Component{
                         </pre>
                         </div>
                         <div className="card-footer">
-                        <div className="button-fb">
+                        <div className="button-fb" onClick={this._goFb}>
                             <i className="fab fa-facebook-f"></i>&nbsp;&nbsp;Facebook
                         </div>
                         <div className="wrapper">

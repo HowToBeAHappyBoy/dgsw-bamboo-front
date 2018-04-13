@@ -19,6 +19,19 @@ body, html {
     font-weight: bold;
     text-align: center;
     font-size: 1.325em;
+    .route{
+        display:table;
+        margin:auto;
+        a{
+            font-size:3px;
+        }
+    }
+    a{ 
+        // display:table;
+        // margin:auto;
+        text-decoration: none;
+        color: #f2f2f2;
+      }
 }
 .sidebar {
     height: 100%;

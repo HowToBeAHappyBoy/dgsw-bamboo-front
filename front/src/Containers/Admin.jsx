@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import '../Assets/User.scss';
 import axios from 'axios';
-import { Redirect } from 'react-router-dom';
-import aMain from './aMain';
+
 
 class Admin extends Component{
+    state={};
     constructor(props){
         super(props);
         this._reject=this._reject.bind(this);
@@ -24,12 +24,13 @@ class Admin extends Component{
         .then((response)=>{
           if(response.status!==232){
             alert('승인 완료');
+            this.props.refresh();
           }else if(response.status===232){
             alert('다른 관리자랑 겹쳐보리기');
-            this.props.history.push("/admin");
+            this.props.refresh();
           }else{
             alert('서지녁한테 문의하세요 오류남');
-            this.props.history.push("/admin");
+            this.props.refresh();
           }
         })
         .catch(error=>error);
@@ -49,11 +50,13 @@ class Admin extends Component{
         .then(res=>{
           if(res.status!==232){
             alert('거부 완료');
-            e.preventDefault();
+            this.props.refresh();
           }else if(res.status===232){
             alert('다른 관리자랑 겹쳐보리기');
+            this.props.refresh();
           }else{
             alert('서지녁한테 문의하세요 오류남');
+            this.props.refresh();
           }
         })
         .catch(err=>console.log(err));

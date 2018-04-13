@@ -60,7 +60,7 @@
     }
 }
 .mainpost{
-    margin-left: 320px;
+    margin-left: 550px;
 }
 .more{
     background-color: #1abc9c;
@@ -94,7 +94,11 @@
         transform: translateX(0px);
     }
 }
-
+@media screen and (max-width:1500px){
+    .mainpost{
+        margin-left:300px;
+    }
+}
 @media screen and (max-width: 1080px) {
     * {
         font-size: 14px;
@@ -108,7 +112,7 @@
     .contents {
         margin: 64px;
         .post{
-            width: 30em;
+            width: 50em;
             .post-footer{
                 .button-post{
                     width: 140px;
@@ -119,7 +123,7 @@
             }
             .post-content{
                 textarea{
-                    width: 25em;
+                    width: 45em;
                 }
             }
         }
@@ -143,6 +147,7 @@
         margin: 32px;
         width: 40em;
         .post{
+            margin-top:5px;
             width: 41em;
             .post-footer{
                 font-size: 1em;
@@ -170,6 +175,7 @@
         margin: 32px;
         width: 25em;
         .post{
+            margin-top:5px;
             width: 25em;
             .post-footer{
                 font-size: 1em;
@@ -197,6 +203,7 @@
         margin: 32px;
         width: 22em;
         .post{
+            margin-top:5px;
             width: 22em;
             .post-footer{
                 font-size: 1em;
@@ -222,15 +229,16 @@
     }
     .contents {
         margin: 32px;
-        width: 19em;
+        width: 23em;
         .post{
-            width: 19em;
+            margin-top:5px;
+            margin-left:-3px;
             .post-footer{
                 font-size: 1em;
             }
             .post-content{
                 textarea{
-                    width: 14em;
+                    width: 18em;
                 }
             }
         }

@@ -10,6 +10,8 @@ class aMain extends Component{
           id:0,
           docs:null
         };
+      }
+      componentDidMount(){
         this._getCount();
         this._getDocs();
       }
@@ -17,7 +19,7 @@ class aMain extends Component{
         localStorage.clear();
         this.props.history.push("/");
       }
-      _getCount=async ()=>{
+      _getCount=()=>{
         const url="http://ec2-13-125-167-78.ap-northeast-2.compute.amazonaws.com/api/admin/count";
         return axios.get(url,{
           headers:{
@@ -70,12 +72,15 @@ class aMain extends Component{
         .then((response)=>{
           return response;
         })
-        .catch(err=> console.log(err));
+        .catch(err=>err);
       };
-      _renderDocs=()=>{
+      _renderDocs(){
+        const refresh=()=>{
+          this.props.history.push("/login");
+        }
         const docs=this.state.docs.map(doc=>{
           return(
-            <Admin num={doc.idx} docs={doc.desc} date={doc.writeDate} key={doc.id}/>
+            <Admin num={doc.idx} docs={doc.desc} date={doc.writeDate} key={doc.id} refresh={refresh}/>
             )
         });
         return docs;

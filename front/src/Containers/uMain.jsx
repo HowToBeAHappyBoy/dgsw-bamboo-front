@@ -5,12 +5,14 @@ import axios from 'axios';
 
 class uMain extends Component{
     constructor(){
-        super();
-        this._getCount();
+        super();  
         this.state={
             id:0,
             docs:null
         }
+    }
+    componentDidMount(){
+        this._getCount();
         this._getDocs();
     }
     _getDocs=async ()=>{
@@ -23,7 +25,6 @@ class uMain extends Component{
             id:this.state.id+5,
             docs:docs.data.posted.reverse()
           })
-          console.log(this.state);
           return;
         }else{
           let pastDocs=this.state.docs;
@@ -32,7 +33,6 @@ class uMain extends Component{
             id:this.state.id+5,
             docs:newDocs.concat(pastDocs)
           });
-          console.log(this.state);
           return;
         }
     };

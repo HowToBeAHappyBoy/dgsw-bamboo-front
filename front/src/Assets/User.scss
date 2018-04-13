@@ -163,7 +163,7 @@
     }
 }
 
-@media screen and (max-width: 1080px) {
+@media only screen and (max-width: 1080px) {
     * {
         font-size: 14px;
     }
@@ -177,18 +177,21 @@
         margin: 64px;
         .card{
             .card-footer{
-                .button-fb,.button-allow,.button-reject,.button-logout{
+                .button-fb{
+                    width: 140px;
+                }
+                .button-allow,.button-reject,.button-logout{
                     width: 140px;
                 }
                 .wrapper{
-                    opacity: 0; letter-spacing: -60px;
+                    font-size:15px;
                 }
             }
         }
     }
 }
 
-@media screen and (max-width: 640px) {
+@media only screen and (max-width: 640px) {
     * {
         font-size: 14px;
     }
@@ -203,8 +206,14 @@
         .card{
             .card-footer{
                 font-size: 1em;
+                .button-fb{
+                    width:100px;
+                }
                 .button-allow,.button-reject,.button-logout{
-                    width: 125px;
+                    width: 100px;
+                }
+                .wrapper{
+                    font-size:12px;
                 }
             }
             

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import '../Assets/User.scss';
-import axios from 'axios'
+import axios from 'axios';
+import { Redirect } from 'react-router-dom';
 
 class Login extends Component{
     constructor(props){
@@ -39,23 +40,25 @@ class Login extends Component{
     }
     render(){
         return(
-            <div className="main">
-                <div className="content">
-                    <div className="card">
-                        <div className="card-header">
-                            관리자 로그인
-                        </div>
-                        <div className="card-content" onKeyPress={this.enterkey}>
-                            <input type="text" placeholder="아이디" value={this.state.id} onChange={this.idChange}/>
-                            <input type="password" placeholder="비밀 번호" value={this.state.pw} onChange={this.pwChange}/>
-                        </div>
-                        <div className="card-footer">
-                            <div className="button-login" onClick={this.onSubmit}>
-                                <i class="fas fa-unlock"></i>&nbsp;&nbsp;로그인
+            <div>{localStorage.getItem("@#!!@!@##!@!@!#!@!")?<Redirect to="/admin"/>:
+                <div className="main">
+                    <div className="content">
+                        <div className="card">
+                            <div className="card-header">
+                                관리자 로그인
+                            </div>
+                            <div className="card-content" onKeyPress={this.enterkey}>
+                                <input type="text" placeholder="아이디" value={this.state.id} onChange={this.idChange}/>
+                                <input type="password" placeholder="비밀 번호" value={this.state.pw} onChange={this.pwChange}/>
+                            </div>
+                            <div className="card-footer">
+                                <div className="button-login" onClick={this.onSubmit}>
+                                    <i class="fas fa-unlock"></i>&nbsp;&nbsp;로그인
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
+                </div>}
             </div>
         );
     }
