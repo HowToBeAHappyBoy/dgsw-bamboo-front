@@ -19,7 +19,7 @@ class Login extends Component{
     pwChange(e){
         this.setState({...this.state,pw: e.target.value});
     }
-    onSubmit(e){
+    onSubmit=()=>{
         let url='http://ec2-13-125-167-78.ap-northeast-2.compute.amazonaws.com/api/cert/signin';
         return axios.post(url,this.state)
         .then((res)=>{
@@ -47,9 +47,9 @@ class Login extends Component{
                             <div className="card-header">
                                 관리자 로그인
                             </div>
-                            <div className="card-content" onKeyPress={this.enterkey}>
-                                <input type="text" placeholder="아이디" value={this.state.id} onChange={this.idChange}/>
-                                <input type="password" placeholder="비밀 번호" value={this.state.pw} onChange={this.pwChange}/>
+                            <div className="card-content">
+                                <input type="text" placeholder="아이디" value={this.state.id} onChange={this.idChange} onKeyPress={this.enterkey}/>
+                                <input type="password" placeholder="비밀 번호" value={this.state.pw} onChange={this.pwChange} onKeyPress={this.enterkey}/>
                             </div>
                             <div className="card-footer">
                                 <div className="button-login" onClick={this.onSubmit}>

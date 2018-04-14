@@ -2,10 +2,6 @@ import React, { Component } from 'react';
 import '../Assets/User.scss';
 
 class User extends Component{
-    constructor(props){
-        super(props);
-        console.log(this.props);
-    }
     _goFb=()=>{
         const url="https://www.facebook.com/hashtag/"+"대소고_"+this.props.num+"번째_이야기";
         window.open(url,"_blank");
