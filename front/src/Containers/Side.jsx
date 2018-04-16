@@ -15,7 +15,7 @@ class Side extends Component {
             </Link>
 
           <ul>
-              {/* <Link to="/post"><a><li><i class="fas fa-heart"></i>&nbsp;&nbsp;감나무 숲</li></a></Link> */}
+              <a><li><i class="fas fa-heart"></i>&nbsp;&nbsp;감나무 숲</li></a>
               <Link to="/post"><a><li><i className="fas fa-comment"></i>&nbsp;&nbsp;제보하기</li></a></Link>
               <Link to="/login"><a><li><i className="fas fa-cog"></i>&nbsp;&nbsp;관리자</li></a></Link>
           </ul>
