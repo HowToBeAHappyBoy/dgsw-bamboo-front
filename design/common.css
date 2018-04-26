@@ -1,0 +1,62 @@
+/* Published by hw0k */
+/* 대소고 대나무숲 - CSS */
+
+/* Basic Styling */
+* { margin: 0; padding: 0; border: 0; box-sizing: border-box; font-family: "Nanum Gothic", sans-serif; transition: all 0.4s; font-size: 16px; }
+body, html { width: 100%; background-color: #f2f2f2; }
+li { list-style-type: none; }
+a { text-decoration: none; }
+
+/* Topbar and Sidebar */
+#topbar { display: none; padding: 1.33em; background-color: #34495e; color: #f2f2f2; font-weight: bold; text-align: center; font-size: 1.325em; }
+#sidebar { height: 100%; width: 13.33em; position: fixed; top: 0; left: 0; background-color: #34495e; color: #f2f2f2; overflow-x: hidden; box-shadow: 1px 0 2px rgba(16, 16, 16, 0.3); }
+
+#sidebar div { vertical-align: middle; text-align: center; padding: 2.625em 0; font-weight: bold; background-color: #31ae81; color: #f2f2f2; font-size: 1.375em; line-height: 150%; }
+#sidebar p:hover { animation: logo 0.8s infinite 0s linear; cursor: pointer; }
+
+/* Sidebar - Hover Effects */
+#sidebar li:first-child { margin: 1.33em 0 0 0; }
+#sidebar li { padding: 0.75em 1.25em; }
+#sidebar li:hover { cursor: pointer; background-color: #4b647a; }
+
+/* Main Area */
+#main { margin-left: 240px; }
+
+/* FontAwesome Styling */
+#content > i { display: table; color: #484848; font-size: 3em; margin: auto; padding: auto; }
+
+/* Content and Cards Styling */
+#content { margin: 168px; }
+#content .card:first-child { margin-top: 3.75em; }
+#content .card { box-shadow: 0 0 2px rgba(16, 16, 16, 0.3); margin: 5.5em 0; }
+#content .card .card-header { background-color: #1abc9c; color: white; padding: 1.5em; font-weight: bold; font-size: 1.125em; }
+#content .card .card-content { background-color: #ffffff; color: black; padding: 1.5em; line-height: 150%; }
+#content .card .card-footer { background-color: #ffffff; border-top: 1px solid #e0e0e0; color: #888888; padding: 1.5em; text-align: right; font-size: 0.5em; line-height: 1.6; }
+#content .card .card-footer .button-fb { background-color: #3a6fdb; color: white; font-size: 1rem; padding: 0.75em; float: left; width: 240px; text-align: center; }
+#content .card .card-footer .button-fb:hover { cursor: pointer; background-color: #2b59cf; }
+
+@keyframes logo {
+    0% { transform: translateX(0px); }
+    25% { transform: translateX(-4px); }
+    75% { transform: translateX(4px); }
+    100% { transform: translateX(0px); }
+}
+
+/* Media Queries */
+@media screen and (max-width: 1080px) {
+    * { font-size: 14px; }
+    #sidebar { width: 200px; }
+    #main { margin-left: 200px; }
+    #content { margin: 128px; }
+    #content .card .card-footer .button-fb { width: 140px; }
+    #content .card .card-footer .wrapper { opacity: 0; letter-spacing: -60px; }
+}
+
+@media screen and (max-width: 640px) {
+    * { font-size: 14px; }
+    #sidebar { display: none; }
+    #main { margin-left: 0; }
+    #content { margin: 64px; }
+    #topbar { display: block; }
+    #content .card .card-footer { font-size: 1em; }
+}
